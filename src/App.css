@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --main-bg-color: black;
+  --main-text-color: white;
+  --main-text-primary-color: rgb(231, 229, 229);
+  --main-text-secondary-color: rgb(147 147 147);
+  --main-text-disabled-color: rgba(255, 255, 255, 0.3);
+  --input-text-secondary-color: rgba(192, 8, 20, 1);
+  --input-text-bg: rgba(0, 0, 0, 0.3);
+  --input-checkbox-bg: #dddddd;
+  --input-checkbox-checkmark: #bbbbbb;
+}
+
+*:focus {
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.8) inset !important;
+  transition: 9000s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
+  margin: 0;
+}
+
+html,
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+}
+.error {
+  font-size: 12px;
+}
+.Main {
+  height: 100%;
+}
+
+button {
+  font-size: 18px;
+  color: var(--main-text-color);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+[type='text'],
+[type='password'] {
+  padding: 10px;
+  color: var(--main-text-color);
+  font-size: 14px;
+  width: 100%;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.my-facebook-button-class,
+.my-google-button-class {
+  height: 64px;
+  width: 320px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-clip-path: polygon(
+    100% 5%,
+    100% 56%,
+    92% 100%,
+    0% 100%,
+    0 54%,
+    8% 5%
+  );
+  clip-path: polygon(100% 5%, 100% 56%, 92% 100%, 0% 100%, 0 54%, 8% 5%);
+  background: rgba(147, 31, 28, 1);
+  padding: 0 75px;
+  text-shadow: 1px 1px 15px rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+}
+.my-facebook-button-class svg {
+  margin-left: -42px;
+}
+
+.my-google-button-class svg {
+  margin-left: -55px;
+}
+
+.my-google-button-class {
+  padding: 0 90px;
+}
+
+div.react-tel-input {
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 40px;
+  border: 1px solid var(--main-bg-color);
+  background-color: var(--input-text-bg);
+}
+body .react-tel-input .form-control {
+  background: none;
+  border: none;
+}
+body .react-tel-input .flag-dropdown,
+body .react-tel-input .flag-dropdown:hover {
+  background: none !important;
+  border: none;
+  color: #000;
+}
+body .react-tel-input .selected-flag:hover,
+body .react-tel-input .selected-flag:focus,
+body .react-tel-input .flag-dropdown.open .selected-flag {
+  background: none;
+}
+.customSelect {
+  width: 100%;
+}
+.customSelect select {
+  border: 1px solid #000;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+}
+.customSelect label {
+  position: absolute;
+  font-size: 0.6rem;
+  color: #aaa;
+  left: 10px;
+  top: -7px;
+}
+
+.optionList {
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.optionList .check-box-effect {
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+.optionList .check-box-effect:before {
+  content: '';
+  width: 0px;
+  height: 2px;
+  border-radius: 2px;
+  background: #626262;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 9px;
+  left: 6px;
+  transition: width 50ms ease 50ms;
+  transform-origin: 0% 0%;
+}
+
+.optionList .check-box-effect:after {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #626262;
+  position: absolute;
+  transform: rotate(305deg);
+  top: 13px;
+  left: 7px;
+  transition: width 50ms ease;
+  transform-origin: 0% 0%;
+}
+
+.optionList:hover .check-box-effect:before {
+  width: 5px;
+  transition: width 100ms ease;
+}
+
+.optionList:hover .check-box-effect:after {
+  width: 10px;
+  transition: width 150ms ease 100ms;
+}
+
+.optionList input[type='checkbox'] {
+  display: none;
+}
+
+.optionList input[type='checkbox']:checked + .check-box-effect {
+  background-color: white !important;
+}
+
+.optionList input[type='checkbox']:checked + .check-box-effect:after {
+  width: 10px;
+  background: #086161;
+  transition: width 150ms ease 100ms;
+}
+
+.optionList input[type='checkbox']:checked + .check-box-effect:before {
+  width: 5px;
+  background: #086161;
+  transition: width 150ms ease 100ms;
+}
+
+.optionList input[type='checkbox']:checked:hover + .check-box-effect {
+  background-color: #dcdcdc;
+}
+
+.optionList input[type='checkbox']:checked:hover + .check-box-effect:after {
+  width: 10px;
+  background: #086161;
+  transition: width 150ms ease 100ms;
+}
+
+.optionList input[type='checkbox']:checked:hover + .check-box-effect:before {
+  width: 5px;
+  background: #086161;
+  transition: width 150ms ease 100ms;
+}
